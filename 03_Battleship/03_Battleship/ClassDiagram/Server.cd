@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="_03_Battleship.Model.Server">
+    <Position X="10.75" Y="6" Width="3" />
+    <TypeIdentifier>
+      <HashCode>IgAAAAAAACAAAAAAAAAAAQCAAAAgAAAAAAAIAAQAACA=</HashCode>
+      <FileName>Model\Server\Server.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="battleManager" />
+      <Field Name="matchMaker" />
+      <Field Name="connectionManager" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="_03_Battleship.Model.BattleManager">
+    <Position X="8.5" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAgAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Server\BattleManger\BattleManager.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_03_Battleship.Model.Competitor">
+    <Position X="1" Y="5.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AQABAAAgAgAAAEMAAAAQCIAABAABAAAAAAAAAAAABIA=</HashCode>
+      <FileName>Model\Server\Battle\Competitor.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_03_Battleship.Model.Battle">
+    <Position X="4.5" Y="6.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAIABAREAAAAAAAAAEAAEAAAAAAAAAA=</HashCode>
+      <FileName>Model\Server\Battle\Battle.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="CompetitorA" />
+      <Property Name="CompetitorB" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="_03_Battleship.Model.MatchMaker">
+    <Position X="14.75" Y="4.75" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAQACAAAAAAAAEAACAAEAAAQAAAAAAAAAAACA=</HashCode>
+      <FileName>Model\Server\MatchMaker\MatchMaker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="_03_Battleship.EnhancedNetworking.IConnectionManager">
+    <Position X="11.25" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQCAAAAAAAAAAAAAAAAFAAAAAIAAAACAAAAA=</HashCode>
+      <FileName>EnhancedNetworking\ConnectionManager\IConnectionManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

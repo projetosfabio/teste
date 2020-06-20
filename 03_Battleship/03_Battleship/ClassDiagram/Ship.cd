@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="_03_Battleship.Model.Ship">
+    <Position X="5.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAgAAAAAABCAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Ship\Ship.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Position" />
+      <Property Name="Orientation" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="_03_Battleship.Model.Carrier" Collapsed="true">
+    <Position X="1" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Ship\Carrier.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_03_Battleship.Model.Battleship" Collapsed="true">
+    <Position X="10" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Ship\Battleship.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_03_Battleship.Model.Cruiser" Collapsed="true">
+    <Position X="3.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Ship\Cruiser.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_03_Battleship.Position">
+    <Position X="5.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAYAA=</HashCode>
+      <FileName>Model\Position.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_03_Battleship.Model.Destroyer" Collapsed="true">
+    <Position X="7.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Ship\Destroyer.cs</FileName>
+      <NewMemberFileName>Model\Ship\Sub.cs</NewMemberFileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="_03_Battleship.Model.Orientation">
+    <Position X="2.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Ship\Orientation.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

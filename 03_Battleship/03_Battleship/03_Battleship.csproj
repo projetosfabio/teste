@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{88DAD3D2-03D1-432B-96C2-9B675DD15557}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>_03_Battleship</RootNamespace>
+    <AssemblyName>03_Battleship</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ShipUnit.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="Command\AddShipPositionCommand.cs" />
+    <Compile Include="Command\DeclineChallengeCommand.cs" />
+    <Compile Include="Command\ConfirmBattleCommand.cs" />
+    <Compile Include="Command\ViewChangingCommand\ConnectToServerCommand.cs" />
+    <Compile Include="Command\HighlightSquaresCommand.cs" />
+    <Compile Include="Command\RandomPositionsCommand.cs" />
+    <Compile Include="Command\RotateShipCommand.cs" />
+    <Compile Include="Command\SelectShipCommand.cs" />
+    <Compile Include="Command\SendMoveCommand.cs" />
+    <Compile Include="Command\ViewChangingCommand\EnterBattleCommand.cs" />
+    <Compile Include="Command\JoinGameCommand.cs" />
+    <Compile Include="Command\ViewChangingCommand\QuitServerModeCommand.cs" />
+    <Compile Include="Command\ViewChangingCommand\ShowMainMenuCommand.cs" />
+    <Compile Include="EnhancedNetworking\Connection\MessageReceiver.cs" />
+    <Compile Include="EnhancedNetworking\Connection\IConnection.cs" />
+    <Compile Include="EnhancedNetworking\ConnectionManager\IConnectionManager.cs" />
+    <Compile Include="EnhancedNetworking\Connection\TimedOutEventArgs.cs" />
+    <Compile Include="EnhancedNetworking\NetworkTask\NetworkTask.cs" />
+    <Compile Include="EnhancedNetworking\NetworkTask\NetworkTaskThreadArgs.cs" />
+    <Compile Include="Model\Client\ChallengerFoundEventArgs.cs" />
+    <Compile Include="Model\Client\NetworkTask\SendAliveMessageTask.cs" />
+    <Compile Include="Model\Client\NetworkTask\SendLobbyRequestTask.cs" />
+    <Compile Include="Model\Server\MatchMaker\MatchMaker.cs" />
+    <Compile Include="Model\Server\ConnectionData\ConnectionArgs.cs" />
+    <Compile Include="EnhancedNetworking\ConnectionManager\ClientAcceptedEventArgs.cs" />
+    <Compile Include="EnhancedNetworking\Connection\MessageReceivedEventArgs.cs" />
+    <Compile Include="EnhancedNetworking\Connection\MessageReceiverThreadArgs.cs" />
+    <Compile Include="EnhancedNetworking\Message\MessageHandler.cs" />
+    <Compile Include="Command\NewGameCommand.cs" />
+    <Compile Include="Model\Client\ClientDummy.cs" />
+    <Compile Include="Model\Client\LobbyReceivedEventArgs.cs" />
+    <Compile Include="Model\Message\Message.cs" />
+    <Compile Include="EnhancedNetworking\Message\MessageContainer.cs" />
+    <Compile Include="Model\Message\MessageType.cs" />
+    <Compile Include="MVVMCore\Command\BaseCommand.cs" />
+    <Compile Include="Command\ViewChangingCommand\ShowEnterServerIPCommand.cs" />
+    <Compile Include="Command\ViewChangingCommand\StartServerModeCommand.cs" />
+    <Compile Include="MVVMCore\Command\ViewChangingCommand.cs" />
+    <Compile Include="Model\Server\Battle\Battle.cs" />
+    <Compile Include="Model\Server\BattleManger\BattleManager.cs" />
+    <Compile Include="Model\Server\BattleManger\FinishedArgs.cs" />
+    <Compile Include="Model\Server\Battle\Competitor.cs" />
+    <Compile Include="Model\Server\MatchMaker\BattleReadyEventArgs.cs">
+      <ExcludeFromStyleCop>False</ExcludeFromStyleCop>
+    </Compile>
+    <Compile Include="EnhancedNetworking\Connection\DisconnectedEventArgs.cs" />
+    <Compile Include="Model\Ship\Battleship.cs" />
+    <Compile Include="Model\Ship\Carrier.cs" />
+    <Compile Include="Model\Client\Client.cs" />
+    <Compile Include="Model\Server\ConnectionData\ClientState.cs" />
+    <Compile Include="Model\Ship\Orientation.cs" />
+    <Compile Include="Model\Ship\Cruiser.cs" />
+    <Compile Include="EnhancedNetworking\Connection\TcpConnection.cs" />
+    <Compile Include="EnhancedNetworking\ConnectionManager\TcpConnectionManager.cs" />
+    <Compile Include="EnhancedNetworking\EnhancedTcpClient\DataReceivedEventArgs.cs" />
+    <Compile Include="Model\Ship\Destroyer.cs" />
+    <Compile Include="EnhancedNetworking\EnhancedTcpClient\EnhancedTcpClient.cs" />
+    <Compile Include="Model\BattleField.cs" />
+    <Compile Include="Model\Marker\HitMarker.cs" />
+    <Compile Include="EnhancedNetworking\EnhancedTcpClient\ListenerThreadArgs.cs" />
+    <Compile Include="EnhancedNetworking\Timer\LimitReachedEventArgs.cs" />
+    <Compile Include="Model\Marker\Marker.cs" />
+    <Compile Include="Model\Marker\MissedMarker.cs" />
+    <Compile Include="Model\MoveReceivedEventArgs.cs" />
+    <Compile Include="Model\Position.cs" />
+    <Compile Include="Model\Server\Server.cs" />
+    <Compile Include="EnhancedNetworking\ConnectionManager\ConnectionManagerThreadArgs.cs" />
+    <Compile Include="Model\Ship\Ship.cs" />
+    <Compile Include="Model\Ship\Sub.cs" />
+    <Compile Include="Model\Server\Battle\ShipPositionsReceivedEventArgs.cs" />
+    <Compile Include="Model\ThreadArgs.cs" />
+    <Compile Include="EnhancedNetworking\NetworkingThreadArgs.cs" />
+    <Compile Include="EnhancedNetworking\Timer\Timer.cs" />
+    <Compile Include="EnhancedNetworking\Timer\TimerThreadArgs.cs" />
+    <Compile Include="MVVMCore\ViewModel\ViewRepresentingViewModel.cs" />
+    <Compile Include="ViewModel\BattleFieldModalViewModel.cs" />
+    <Compile Include="ViewModel\BattleField\BattleFieldAreaViewModel.cs" />
+    <Compile Include="Command\CloseLobbyModalCommand.cs" />
+    <Compile Include="ViewModel\BattleField\ShipMoverViewModel.cs" />
+    <Compile Include="ViewModel\HighlightedState.cs" />
+    <Compile Include="ViewModel\Lobby\BattleListEntryViewModel.cs" />
+    <Compile Include="ViewModel\Lobby\BattleListViewModel.cs" />
+    <Compile Include="ViewModel\BattleField\BFSquareViewModel.cs" />
+    <Compile Include="ViewModel\ShipToPlaceViewModel.cs" />
+    <Compile Include="ViewModel\ShipType.cs" />
+    <Compile Include="ViewModel\SquareState.cs" />
+    <Compile Include="ViewModel\ToolbarViewModel.cs" />
+    <Compile Include="ViewModel\ViewRepresenter\BattleFieldViewModel.cs" />
+    <Compile Include="ViewModel\ViewRepresenter\EnterServerIPViewModel.cs" />
+    <Compile Include="ViewModel\ViewRepresenter\LobbyViewModel.cs" />
+    <Compile Include="ViewModel\ViewRepresenter\MainMenuViewModel.cs" />
+    <Compile Include="ViewModel\MainWindowViewModel.cs" />
+    <Compile Include="MVVMCore\ViewModel\NotifyingViewModel.cs" />
+    <Compile Include="ViewModel\ViewRepresenter\ServerModeViewModel.cs" />
+    <Compile Include="MVVMCore\ViewModel\ViewShellBaseViewModel.cs" />
+    <Compile Include="ViewModel\ViewShellViewModel.cs" />
+    <Compile Include="View\Client\BattleField.xaml.cs">
+      <DependentUpon>BattleField.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Client\EnterServerIP.xaml.cs">
+      <DependentUpon>EnterServerIP.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Client\Lobby.xaml.cs">
+      <DependentUpon>Lobby.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\Client\Partials\BattleFieldItems.xaml.cs">
+      <DependentUpon>BattleFieldItems.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ServerMode.xaml.cs">
+      <DependentUpon>ServerMode.xaml</DependentUpon>
+    </Compile>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="View\Client\BattleField.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Client\EnterServerIP.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Client\Lobby.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\Client\Partials\BattleFieldItems.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\GlobalResources.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ServerMode.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="ClassDiagram\Message.cd" />
+    <None Include="ClassDiagram\Client.cd" />
+    <None Include="ClassDiagram\Server.cd" />
+    <None Include="ClassDiagram\Ship.cd" />
+    <None Include="EnhancedNetworking\EnhancedNetworkingPackage.cd" />
+    <None Include="MVVMCore\MVVMCore.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\ShipUnit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Assets\ShipUnit.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="ShipUnit.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

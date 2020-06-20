@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="_03_Battleship.EnhancedNetworking.TcpConnectionManager">
+    <Position X="8.25" Y="1.75" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>AAhAABAAQCAAAAAACIAIAAAAAAFAAAAAIAAAECAAAAA=</HashCode>
+      <FileName>EnhancedNetworking\ConnectionManager\TcpConnectionManager.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsCollectionAssociation>
+      <Property Name="Connections" />
+    </ShowAsCollectionAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_03_Battleship.EnhancedNetworking.TcpConnection">
+    <Position X="2.25" Y="9.25" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>gCgAAAAAwgAAQBEAADgIAIAAAABAAAAIAiAAEACCEIA=</HashCode>
+      <FileName>EnhancedNetworking\Connection\TcpConnection.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="EnhancedTcpClient" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="_03_Battleship.EnhancedNetworking.EnhancedTcpClient">
+    <Position X="5.75" Y="9.5" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>ACCCAAAAgAABQAAAAAAAAIAAAAAIQAAIAAAgFIGAAIQ=</HashCode>
+      <FileName>EnhancedNetworking\EnhancedTcpClient\EnhancedTcpClient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="_03_Battleship.EnhancedNetworking.NetworkTask">
+    <Position X="2.5" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAACAAAAQAAAABABAAAAAAACAAIAAAAAAAAAA=</HashCode>
+      <FileName>EnhancedNetworking\NetworkTask\NetworkTask.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="connection" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="_03_Battleship.EnhancedNetworking.Timer" Collapsed="true">
+    <Position X="11.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIBCQAAAAAAAAAAAAAAAAgAAAAKAAAAgAAAAA=</HashCode>
+      <FileName>EnhancedNetworking\Timer\Timer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="_03_Battleship.EnhancedNetworking.IConnectionManager">
+    <Position X="11.75" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQCAAAAAAAAAAAAAAAAFAAAAAIAAAACAAAAA=</HashCode>
+      <FileName>EnhancedNetworking\ConnectionManager\IConnectionManager.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="_03_Battleship.EnhancedNetworking.IConnection">
+    <Position X="5.5" Y="2.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAwAAAQAAAACgAAIAAAABAAAAIACAAEACCAIA=</HashCode>
+      <FileName>EnhancedNetworking\Connection\IConnection.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
